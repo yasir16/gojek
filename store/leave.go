@@ -37,5 +37,9 @@ func (ll *leaveStore) Execute(cmd *schema.Command) (string, error) {
 	if err = ParkingLot.LeaveSlot(uint(slotID)); err != nil {
 
 	}
+	if len(ParkingLot.Slots) < slotID {
+		return fmt.Sprintf(SlotIsNotAvailable, slotID, len(ParkingLot.Slots)), nil
+	}
+
 	return fmt.Sprintf(SlotIsFreeInfo, slotID), nil
 }
