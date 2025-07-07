@@ -11,6 +11,8 @@ var (
 	SlotIsFreeInfo = "Slot number %v is free"
 	// SlotLeaveInfo holds the STDOUT message for cmd `leave`
 	SlotLeaveInfo = "Slot number %v is free"
+	// SlotIsNotAvailable holds the STDOUT message for cmd `status`
+	SlotIsNotAvailable = "Slot number %v is not available max slot %v"
 )
 
 // ParkingLot holds the all parking data
